@@ -53,7 +53,7 @@
                         <i class="fa fa-close"></i>
                     </a>
                     <div id="logo">
-                        <a href="01-home.html"><img src="img/logo.png" alt=""></a>
+                        <a href="01-home.html"><img src="{{asset('/img/logo.png')}}" alt=""></a>
                     </div>
                 </div><!-- // col-md-2 -->
                 <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">
@@ -73,7 +73,7 @@
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img
-                                    src="https://s.gravatar.com/avatar/dfca86228f1ed5f0554827a8d907172a?s=80" alt="">
+                                    src="{{asset('img/3.4.jpg')}}" alt="">
                             </div>
                             <h2>منصور لیاقت</h2>
                             <h3>25 اشتراک</h3>

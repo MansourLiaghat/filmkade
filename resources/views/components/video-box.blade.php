@@ -1,4 +1,4 @@
-<div class="col-lg-2 col-md-4 col-sm-6">
+<div class="col-lg-2 col-md-4 col-sm-6" >
     <div class="video-item">
         <div class="thumb">
             <div class="hover-efect"></div>

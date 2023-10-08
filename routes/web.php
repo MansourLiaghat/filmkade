@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\videoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/' , [indexController::class , 'index']);
+Route::get('/videos/create' , [videoController::class, 'create'])->name('videos.create');
