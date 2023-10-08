@@ -10,6 +10,10 @@ class video extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name' , 'thumbnail' , 'length' , 'url' , 'slug' , 'description'
+        ];
+
     public function getlengthInHiumanAttribute()
     {
         return gmdate("i:s", $this->length);
@@ -19,4 +23,6 @@ class video extends Model
     {
         return (new Verta($value))->formatDifference(\verta());
     }
+
+    
 }

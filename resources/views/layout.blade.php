@@ -64,6 +64,15 @@
                         </form>
                     </div>
                 </div><!-- // col-md-3 -->
+
+                <div class="col-lg-3 col-md-3 col-sm-5 hidden-xs hidden-sm">
+                    <ul class="top-menu">
+                        <li><a href="{{route('videos.index')}}">@lang('layout.home_page')</a></li>
+                        <li><a href="{{route('videos.create')}}">@lang('layout.add_video')</a></li>
+                        <li><a href="{{route('videos.index')}}">@lang('layout.config')</a></li>
+                    </ul>
+                </div>
+
                 <div class="col-lg-3 col-md-3 col-sm-5 hidden-xs hidden-sm">
                 </div><!-- // col-md-4 -->
                 <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs hidden-sm">
@@ -96,15 +105,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="main-category-menu">
-                        <li class="color-1"><a href="02-category.html"><i class="fa fa-music"></i>موسیقی</a></li>
-                        <li class="color-2"><a href="02-category.html"><i class="fa fa-soccer-ball-o"></i>ورزشی</a></li>
-                        <li class="color-3"><a href="02-category.html"><i class="fa fa-gamepad"></i>بازی</a></li>
-
+                        <li class="color-1"><a href="02-category.html"><i class="fa fa-music"></i>@lang('layout.menu.music')</a></li>
+                        <li class="color-2"><a href="02-category.html"><i class="fa fa-soccer-ball-o"></i>@lang('layout.menu.sport')</a></li>
+                        <li class="color-3"><a href="02-category.html"><i class="fa fa-gamepad"></i>@lang('layout.menu.game')</a></li>
+                        <li class="color-3"><a href="02-category.html"><i class="fa fa-gamepad"></i>@lang('layout.menu.history')</a></li>
                     </ul>
                 </div><!-- // col-md-14 -->
             </div><!-- // row -->
         </div><!-- // container-full -->
     </div><!-- // main-category -->
+
+
+    @if (session('alert'))
+    <div class="alert alert-success">
+        {{ session('alert') }}
+    </div>
+    @endif
+
 
     
     @yield('content')
