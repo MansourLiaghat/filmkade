@@ -20,7 +20,7 @@ class videoFactory extends Factory
             'name' => $this->faker->name(),
             'thumbnail' => 'https://loremflickr.com/446/240/world?random=' . rand(1, 99),
             'length' => $this->faker->randomNumber(3),
-            'url' => 'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
+            'url' => 'https://filesamples.com/samples/video/mp4/sample_960x540.mp4',
             'slug' => $this->faker->slug(),
             'description' => $this->faker->realText(),
         ];

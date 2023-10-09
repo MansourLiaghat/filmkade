@@ -16,4 +16,9 @@ class videoController extends Controller
         video::create($request->all());
         return redirect()->route('videos.index')->with('alert',__('messages.success.message'));
     }
+
+    public function show(video $video)
+{
+    return view('videos.Show' , compact('video'));
+}
 }
