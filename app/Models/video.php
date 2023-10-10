@@ -29,5 +29,10 @@ class video extends Model
        return video::all()->random($count);
     }
 
+    public function getRouteKeyName()
+    {
+        return'slug';
+    }
+
     
 }
