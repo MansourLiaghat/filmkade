@@ -36,7 +36,7 @@
                                 </div>
                             	<div class="col-md-12">
                                 	<label>توضیحات</label>
-                                    <textarea class="form-control" name=description value="{{$video->description}}" rows="4" placeholder="توضیح"></textarea>
+                                    <textarea class="form-control" name=description value="{{ $video->description}}" rows="4" placeholder="توضیحات"></textarea>
                                 </div>
                             	<div class="col-md-6">
                                 	<label>تصویر</label>
