@@ -17,6 +17,8 @@
             <a href="{{route('videos.edit', $video->slug)}}">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
             </a>
+            <span class="views"><i class="fa fa-tag"></i>{{$video->category_name}}</span>
         </div>
+
     </div>
 </div>

@@ -11,7 +11,7 @@ class video extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name' , 'thumbnail' , 'length' , 'url' , 'slug' , 'description'
+        'name' , 'thumbnail' , 'length' , 'url' , 'slug' , 'description' , 'category_id'
         ];
 
     public function getlengthInHiumanAttribute()
@@ -37,6 +37,11 @@ class video extends Model
     public function category()
     {
         return $this->belongsTo(category::class);
+    }
+
+    public function getCategoryNameAttribute()
+    {
+        return $this->category?->name;
     }
 
     

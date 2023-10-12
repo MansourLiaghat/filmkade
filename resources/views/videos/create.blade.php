@@ -34,6 +34,14 @@
                                 	<label>آپلود فیلم</label>
                                     <input id="upload_file" name=url value="{{old('url')}}" type="file" class="file">
                                 </div>
+                                <div class="col-md-6">
+                                	<label>دسته بندی</label>
+                                    <select name="category_id" id="category" class="form-control">
+                                    @foreach($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
                             	<div class="col-md-12">
                                 	<label>توضیحات</label>
                                     <textarea class="form-control" name=description value="{{old('description')}}" rows="4" placeholder="توضیح"></textarea>
