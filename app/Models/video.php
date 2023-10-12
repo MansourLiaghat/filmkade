@@ -34,5 +34,10 @@ class video extends Model
         return'slug';
     }
 
+    public function category()
+    {
+        return $this->belongsTo(category::class);
+    }
+
     
 }

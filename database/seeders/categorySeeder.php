@@ -46,7 +46,8 @@ class categorySeeder extends Seeder
                 'icon' => 'fa fa-laptop'
             ]
             ];
-            foreach ($categories as $categoryName => $details) {
+            foreach ($categories as $categoryName => $details)
+            {
                 category::create([
                     'name' => $categoryName,
                     'slug' => $details['slug'],
