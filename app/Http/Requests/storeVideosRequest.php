@@ -30,7 +30,8 @@ class storeVideosRequest extends FormRequest
             'length' => ['required' , 'integer'],
             'url' => ['required'],
             'slug' => ['required' , 'alpha_dash'],
-            'description' => ['required']
+            'description' => ['required'],
+            'category_id' => ['required' , 'exists:categories,id']
         ];
     }
     protected function prepareForValidation(): void
