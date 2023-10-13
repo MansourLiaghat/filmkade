@@ -24,9 +24,9 @@ class video extends Model
         return (new Verta($value))->formatDifference(\verta());
     }
 
-    public function relatedVideos(int $count = 6)
+    public function relatedVideos($count)
     {
-       return video::all()->random($count);
+        return $this->category->getRandomVideos($count);
     }
 
     public function getRouteKeyName()
@@ -43,6 +43,6 @@ class video extends Model
     {
         return $this->category?->name;
     }
-
+    
     
 }

@@ -100,20 +100,10 @@
         </div><!-- // container-full -->
     </header><!-- // header -->
 
-    <div id="main-category">
-        <div class="container-full">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="main-category-menu">
-                        <li class="color-1"><a href="02-category.html"><i class="fa fa-music"></i>@lang('layout.menu.music')</a></li>
-                        <li class="color-2"><a href="02-category.html"><i class="fa fa-soccer-ball-o"></i>@lang('layout.menu.sport')</a></li>
-                        <li class="color-3"><a href="02-category.html"><i class="fa fa-gamepad"></i>@lang('layout.menu.game')</a></li>
-                        <li class="color-3"><a href="02-category.html"><i class="fa fa-gamepad"></i>@lang('layout.menu.history')</a></li>
-                    </ul>
-                </div><!-- // col-md-14 -->
-            </div><!-- // row -->
-        </div><!-- // container-full -->
-    </div><!-- // main-category -->
+
+    <!-- craete header menu -->
+    <x-header-menu/>
+    <!-- // end header menu -->
 
 
     @if (session('alert'))

@@ -13,4 +13,9 @@ class category extends Model
     {
         return $this->hasMany(video::class);
     }
+
+    public function getRandomVideos (int $count=3)
+    {
+        return $this->videos()->inRandomOrder()->get()->take($count);
+    }
 }
