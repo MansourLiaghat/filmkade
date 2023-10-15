@@ -13,3 +13,8 @@ import '../js/imagesloaded.pkgd.min'
 import '../js/jquery-3.2.1.min'
 import '../js/jquery.sticky-kit.min'
 import '../js/smooth-scroll.min'
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
