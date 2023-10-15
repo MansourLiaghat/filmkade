@@ -12,7 +12,9 @@ return[
         'url' => 'آدرس ویدئو' ,
         'description' => 'توضیح ویدئو' ,
         'thumbnail' => 'تصویر ویدئو' ,
-
+        'email' => 'ایمیل',
+        'password' => 'رمز عبور' ,
+        'name_user' => 'نام کاربری'
     ]
 
 ];
