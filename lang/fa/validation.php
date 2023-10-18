@@ -14,7 +14,8 @@ return[
         'thumbnail' => 'تصویر ویدئو' ,
         'email' => 'ایمیل',
         'password' => 'رمز عبور' ,
-        'name_user' => 'نام کاربری'
+        'name_user' => 'نام کاربری',
+        'optionsCheckboxes' => 'مطالعه و قبول قوانین سایت'
     ]
 
 ];

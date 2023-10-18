@@ -78,13 +78,14 @@
                 <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs hidden-sm">
                     <!--  -->
                 </div>
+                @auth
                 <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img
                                     src="{{asset('img/3.4.jpg')}}" alt="">
                             </div>
-                            <h2>منصور لیاقت</h2>
+                            <h2>{{auth()->user()->name}}</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -96,6 +97,13 @@
                         </ul>
                     </div>
                 </div>
+                @endauth
+                @guest
+                <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                        <a href="{{ route('login.create') }}" class="btn btn-danger">ورود</a>
+                        <a href="{{ route('register.create') }}" class="btn btn-danger">ثبت نام</a>
+                    </div>
+                @endguest
             </div><!-- // row -->
         </div><!-- // container-full -->
     </header><!-- // header -->

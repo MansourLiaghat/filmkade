@@ -31,7 +31,7 @@
                 
 				<div class="form-group label-floating">
 					<label class="control-label">تأیید رمز عبور</label>
-					<input class="form-control" name="password" placeholder="*@#AsdF123456" type="password">
+					<input class="form-control" name="password_confirmation" placeholder="*@#AsdF123456" type="password">
 				</div>
 
 				<div class="form-group label-floating is-select">
@@ -46,7 +46,7 @@
 					<div class="checkbox">
 						<label>
 							<input name="optionsCheckboxes" type="checkbox">
-							<a href="#">شرایط و ضوابط</a> سایت را قبول میکنم
+							<a href="#">شرایط و ضوابط</a> سایت را مطالعه و قبول میکنم
 						</label>
 					</div>
 				</div>
