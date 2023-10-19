@@ -62,7 +62,7 @@
 				<a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left"><i class="fa fa-twitter" aria-hidden="true"></i>ورود با توییتر</a>
 
 
-				<p>شما یک حساب کاربری دارید؟ <a href="07-log_in_page.html"> ورود!</a> </p>
+				<p>شما یک حساب کاربری دارید؟ <a href="{{route('login.create')}}"> ورود!</a> </p>
             </form>
         </div>
       </div>
