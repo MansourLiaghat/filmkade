@@ -83,11 +83,13 @@
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img
-                                    src="{{asset('img/3.4.jpg')}}" alt="">
+                                    src="{{auth()->User()->Gravatar}}" alt="">
                             </div>
-                            <h2>{{auth()->user()->name}}</h2>
+                            <h2>{{auth()->User()->name}}</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
+                            <a style = "color:white ; font-size:13px ; padding:55px"  href="{{route('logout')}}">خروج</a>
+
                         </a>
                         <ul class="dropdown-menu account-menu">
                             <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>

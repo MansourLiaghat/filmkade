@@ -20,8 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
-        'optionsCheckboxes'
+        'password'
     ];
 
     /**
@@ -42,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getGravatarAttribute()
+    {
+        $hash = md5(strtolower($this->attributes['email']));
+        return "https://www.gravatar.com/avatar/$hash";
+    }
 }
