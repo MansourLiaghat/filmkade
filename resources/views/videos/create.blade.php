@@ -18,10 +18,7 @@
                                 	<label>عنوان</label>
                                     <input type="text" name=name value="{{old('name')}}" class="form-control" placeholder="عنوان">
                                 </div>
-                            	<div class="col-md-6">
-                                	<label>دسته بندی</label>
-                                    <input type="text" name=category value="{{old('category')}}" class="form-control" placeholder="دسته بندی">
-                                </div>
+                            	
                             	<div class="col-md-6">
                                 	<label>برچسب ها</label>
                                     <input type="text" name=slug value="{{old('slug')}}" class="form-control" placeholder="برچسب ها">
@@ -30,10 +27,7 @@
                                 	<label>مدت زمان ویدئو</label>
                                     <input type="text" name=length value="{{old('length')}}" class="form-control" placeholder="مدت زمان ویدئو">
                                 </div>
-                            	<div class="col-md-6">
-                                	<label>آپلود فیلم</label>
-                                    <input id="upload_file" name=url value="{{old('url')}}" type="file" class="file">
-                                </div>
+                            	
                                 <div class="col-md-6">
                                 	<label>دسته بندی</label>
                                     <select name="category_id" id="category" class="form-control">
@@ -49,6 +43,10 @@
                             	<div class="col-md-6">
                                 	<label>تصویر</label>
                                     <input id="featured_image" name=thumbnail value="{{old('thumbnail')}}" type="file" class="file">
+                                </div>
+                                <div class="col-md-6">
+                                	<label>آپلود فیلم</label>
+                                    <input id="upload_file" name=url value="{{old('url')}}" type="file" class="file">
                                 </div>
                             	<div class="col-md-6">
                                     <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>

@@ -9,7 +9,7 @@
 
                         <!-- Video Player -->
 
-                        <h1 class="video-title">{{$video->name}}</h1>
+                        <h1 class="video-title">{{$video->owner_Name}}</h1>
                         <hr/>
                         <div>
                             <p>{{$video->description}}</p>
@@ -47,7 +47,7 @@
                         <!-- Chanels Item -->
                         <div class="chanel-item">
                             <div class="chanel-thumb">
-                                <a href="#"><img src="{{asset('img/ch-1.jpg')}}" alt=""></a>
+                                <a href="#"><img src="{{$video->owner_avatar}}" alt=""></a>
                             </div>
                             <div class="chanel-info">
                                 <a class="title" href="#">{{$video->name}}</a>
