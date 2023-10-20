@@ -3,6 +3,9 @@
 use App\Http\Controllers\categoryVideoController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\videoController;
+use App\Mail\verifyEmail;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +32,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/email' , function(){
+    $user = User::first();
+    Mail::to('mansourliaghat@yahoo.com')->send(new verifyEmail($user));
+});
