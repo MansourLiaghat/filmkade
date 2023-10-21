@@ -36,5 +36,14 @@ require __DIR__.'/auth.php';
 
 Route::get('/email' , function(){
     $user = User::first();
-    Mail::to('mansourliaghat@yahoo.com')->send(new verifyEmail($user));
+   return new verifyEmail($user);
 });
+
+
+// Route::get('/verify/{id}' , function(){
+//     dd(request()->hasValidSignature());
+// })->name('verify');
+
+// Route::get('/generate' , function(){
+//     echo URL::temporarySignedRoute('verify' , now()->addsecond(20) , ["id" => 5]);
+// });
