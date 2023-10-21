@@ -46,9 +46,10 @@ class verifyEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mails.verifyMail' ,
+            markdown: 'mails.verifyEmail' ,
             with: [
-                'user_name' => $this->user->name
+                'url' => "http://google.com",
+                'user_name' => $this->user->name 
             ]
         );
     }
