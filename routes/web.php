@@ -3,6 +3,7 @@
 use App\Http\Controllers\categoryVideoController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\videoController;
+use App\Jobs\processVideo;
 use App\Mail\verifyEmail;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
@@ -47,3 +48,8 @@ Route::get('/email' , function(){
 // Route::get('/generate' , function(){
 //     echo URL::temporarySignedRoute('verify' , now()->addsecond(20) , ["id" => 5]);
 // });
+
+
+Route::get('/jobs' , function(){
+    processVideo::dispatch();
+});
