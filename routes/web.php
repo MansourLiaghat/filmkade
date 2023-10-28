@@ -1,11 +1,13 @@
 <?php
 
+use App\Events\videoCreated;
 use App\Http\Controllers\categoryVideoController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\videoController;
 use App\Jobs\processVideo;
 use App\Mail\verifyEmail;
 use App\Models\User;
+use App\Models\video;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -52,4 +54,9 @@ Route::get('/email' , function(){
 
 Route::get('/jobs' , function(){
     processVideo::dispatch();
+});
+
+Route::get('/event' , function(){
+    $video = video::first();
+    videoCreated::dispatch($video);
 });
