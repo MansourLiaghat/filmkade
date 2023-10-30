@@ -8,6 +8,8 @@ use App\Jobs\processVideo;
 use App\Mail\verifyEmail;
 use App\Models\User;
 use App\Models\video;
+use App\Notifications\videoCreated as NotificationsVideoCreated;
+use App\Notifications\videoUpdate;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -59,4 +61,10 @@ Route::get('/jobs' , function(){
 Route::get('/event' , function(){
     $video = video::first();
     videoCreated::dispatch($video);
+});
+
+Route::get('/notify' , function(){
+    $user = user::first();
+   $video = video::first();
+    $user->notify(new videoUpdate($video));
 });
