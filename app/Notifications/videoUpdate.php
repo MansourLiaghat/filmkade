@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class videoUpdate extends Notification
+class videoUpdate extends Notification implements ShouldQueue
 {
     use Queueable;
     private $video;
