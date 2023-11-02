@@ -22,7 +22,6 @@ class VerifyEmailController extends Controller
         if ($request->user()->markEmailAsVerified()) {
             event(new Verified($request->user()));
         }
-
-        return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
+        return redirect()->route('videos.index')->with('alert' , __('messages.email_was_verified'));
     }
 }
