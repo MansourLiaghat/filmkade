@@ -48,9 +48,9 @@ class User extends Authenticatable
         return "https://www.gravatar.com/avatar/$hash";
     }
 
-    public function videos()
+    public function comments()
     {
-        return $this->hasMany(video::class);
+        return $this->hasMany(comment::class);
     }
-    
+
 }
