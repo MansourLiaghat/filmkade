@@ -7,4 +7,5 @@ return [
     'verification-link-sent' => 'لینک تائیدیه ایمیل ارسال شد .',
     'email_was_verified' => 'ایمیل شما تائید شد .',
     'reset-password' => 'لینک بازیابی رمز عیور ارسال شد',
+    'success.comment' => 'نظر شما با موفقیت ثبت گردید',
 ];

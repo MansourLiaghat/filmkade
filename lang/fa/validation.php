@@ -15,7 +15,8 @@ return[
         'email' => 'ایمیل',
         'password' => 'رمز عبور' ,
         'name_user' => 'نام کاربری',
-        'optionsCheckboxes' => 'مطالعه و قبول قوانین سایت'
+        'optionsCheckboxes' => 'مطالعه و قبول قوانین سایت',
+        'body' => 'پر کردن متن نظر'
     ]
 
 ];

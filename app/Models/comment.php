@@ -12,6 +12,7 @@ class comment extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['video_id' , 'user_id' , 'body' ];
     
     public function video()
     {

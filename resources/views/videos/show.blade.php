@@ -4,6 +4,7 @@
 
             <div class="row">
                 <!-- Watch -->
+                <x-validation-errors/>
                 <div class="col-md-8">
                     <div id="watch">
 
@@ -79,15 +80,15 @@
 
                             </ul>
 
-
+                            @auth
                             <h3 class="post-box-title">ارسال نظرات</h3>
-                            <form>
-                                <input type="text" class="form-control" id="Name" placeholder="نام">
-                                <input type="email" class="form-control" id="Email" placeholder="ایمیل">
-                                <input type="text" class="form-control" placeholder="سایت">
-                                <textarea class="form-control" rows="8" id="Message" placeholder="پیام"></textarea>
-                                <button type="button" id="contact_submit" class="btn btn-dm">ارسال پیام</button>
+                            <form action="{{route('comments.store' , $video)}}" method="POST">
+                                @csrf  
+                                
+                                <textarea class="form-control" name="body" rows="8" id="Message" placeholder="پیام"></textarea>
+                                <button id="contact_submit" class="btn btn-dm">ارسال پیام</button>
                             </form>
+                            @endauth
                         </div>
                         <!-- // Comments -->
 

@@ -2,6 +2,7 @@
 
 use App\Events\videoCreated;
 use App\Http\Controllers\categoryVideoController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\videoController;
 use App\Http\Middleware\checkVerifiedEmail;
@@ -28,10 +29,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/' , [indexController::class , 'index'])->name('videos.index');
 Route::get('/videos/create' , [videoController::class, 'create'])->middleware('verifiedEmail')->name('videos.create');
 Route::post('/videos' , [videoController::class , 'store'])->name('videos.store');
-Route::get('/videos/{video}' , [videoController::class , 'show'])->middleware('verifiedEmail')->name('videos.show');
+Route::get('/videos/{video}' , [videoController::class , 'show'])->name('videos.show');
 Route::get('/videos/{video}/edit' , [VideoController::class , 'edit'])->name('videos.edit');
 Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
 Route::get('/categories/{category:slug}/videos', [categoryVideoController::class, 'index'])->name('categories.videos.index');
+Route::post('/videos/{video}/comments' , [CommentController::class , 'store'])->name('comments.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -69,3 +71,4 @@ Route::get('/notify' , function(){
    $video = video::first();
     $user->notify(new videoUpdate($video));
 });
+

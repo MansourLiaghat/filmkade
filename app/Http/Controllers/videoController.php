@@ -22,6 +22,7 @@ class videoController extends Controller
 
     public function show(video $video)
 {
+        $video->load('comments.user');
         return view('videos.Show' , compact('video'));
 }
 
