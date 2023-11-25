@@ -4,6 +4,7 @@ use App\Events\videoCreated;
 use App\Http\Controllers\categoryVideoController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\videoController;
 use App\Http\Middleware\checkVerifiedEmail;
 use App\Jobs\processVideo;
@@ -34,6 +35,11 @@ Route::get('/videos/{video}/edit' , [VideoController::class , 'edit'])->name('vi
 Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
 Route::get('/categories/{category:slug}/videos', [categoryVideoController::class, 'index'])->name('categories.videos.index');
 Route::post('/videos/{video}/comments' , [CommentController::class , 'store'])->name('comments.store');
+Route::get('video/{video}/like' , [LikeController::class , 'store'])->name('videos.like');
+Route::get('video/{video}/dislike' , [LikeController::class , 'store'])->name('videos.dislike');
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
