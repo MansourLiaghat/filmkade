@@ -3,6 +3,7 @@
 use App\Events\videoCreated;
 use App\Http\Controllers\categoryVideoController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\DislikeController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\videoController;
@@ -36,6 +37,7 @@ Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos
 Route::get('/categories/{category:slug}/videos', [categoryVideoController::class, 'index'])->name('categories.videos.index');
 Route::post('/videos/{video}/comments' , [CommentController::class , 'store'])->name('comments.store');
 Route::get('{likeable_type}/{likeable_id}/like' , [LikeController::class , 'store'])->name('likes.store');
+Route::get('{likeable_type}/{likeable_id}/dislike' , [DislikeController::class , 'store'])->name('dislikes.store');
 
 
 
