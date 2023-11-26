@@ -8,10 +8,7 @@ class DislikeController extends Controller
 {
     public function store(Request $request , string $likeable_type , $likeable_id )
     {   
-        $likeable_id->likes()->create([
-        'user_id'=>auth()->id(),
-        'vote'=> -1
-       ]);
-       return back();
+        $likeable_id->dislikedBy(auth()->user());
+        return back();
     }
 }
