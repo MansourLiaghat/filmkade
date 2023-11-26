@@ -36,6 +36,16 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
         });
+
+        Route::bind('likeable_id' , function($value , $route)
+        {
+            $model_name = 'App\\models\\' .ucfirst($route->parameters['likeable_type']);
+            $routekey = (new $model_name)->getRouteKeyName();
+            return $likeable = $model_name::where($routekey , $route->parameters['likeable_id'])->firstorfail();
+        });
+         
+    
+
     }
 
     /**
