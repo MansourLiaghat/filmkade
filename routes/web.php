@@ -35,9 +35,7 @@ Route::get('/videos/{video}/edit' , [VideoController::class , 'edit'])->name('vi
 Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
 Route::get('/categories/{category:slug}/videos', [categoryVideoController::class, 'index'])->name('categories.videos.index');
 Route::post('/videos/{video}/comments' , [CommentController::class , 'store'])->name('comments.store');
-Route::get('video/{video}/like' , [LikeController::class , 'store'])->name('videos.like');
-Route::get('video/{video}/dislike' , [LikeController::class , 'store'])->name('videos.dislike');
-
+Route::get('{likeable_type}/{likeable_id}/like' , [LikeController::class , 'store'])->name('likes.store');
 
 
 
