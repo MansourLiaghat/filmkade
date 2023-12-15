@@ -8,7 +8,7 @@
                     <!-- upload -->
                     <div class="col-md-8">
 						<h1 class="page-title"><span>آپلود</span> فیلم</h1>
-						<form action="{{route('videos.update' , $video->slug)}}" method="post" >
+						<form action="{{route('videos.update' , $video->slug)}}" method="post" enctype="multipart/form-data" >
                         @csrf
 
                         <x-validation-errors/>
@@ -26,14 +26,11 @@
                                 	<label>برچسب ها</label>
                                     <input type="text" name=slug value="{{$video->slug}}" class="form-control" placeholder="برچسب ها">
                                 </div>
-                                <div class="col-md-6">
-                                	<label>مدت زمان ویدئو</label>
-                                    <input type="text" name=length value="{{$video->length}}" class="form-control" placeholder="مدت زمان ویدئو">
-                                </div>
+                            
                             	<div class="col-md-6">
                                 	<label>آپلود فیلم</label>
-                                    <input id="upload_file" name=url value="{{$video->url}}" type="file" class="file">
-                                </div>
+                                    <input type="file" name="file" id="" class="form-control">
+                               </div>
                                 <div class="col-md-6">
                                 	<label>دسته بندی</label>
                                     <select name="category_id" id="category" class="form-control">

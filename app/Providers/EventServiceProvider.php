@@ -6,6 +6,8 @@ use App\Events\videoCreated;
 use App\Jobs\processVideo;
 use App\Listeners\processVideo as ListenersProcessVideo;
 use App\Listeners\sendEmail;
+use App\Models\video;
+use App\Observers\VideoObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -35,7 +37,7 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        video::observe(VideoObserver::class);
     }
 
     /**

@@ -6,13 +6,14 @@ use App\Models\Traits\likeable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Hekmatinasser\Verta\Verta;
+use Illuminate\Support\Facades\Storage;
 
 class video extends Model
 {
     use HasFactory , likeable;
 
     protected $fillable = [
-        'name' , 'thumbnail' , 'length' , 'url' , 'slug' , 'description' , 'category_id'
+        'name' , 'thumbnail' , 'length' , 'path' , 'slug' , 'description' , 'category_id'
         ];
 
     public function getlengthInHiumanAttribute()
@@ -63,5 +64,9 @@ class video extends Model
     public function comments()
     {
         return $this->hasmany(comment::class)->orderBy('created_at' , 'Desc');
+    }
+
+    public function getvideoUrlAttribute(){
+        return '/Storage/' .$this->path;
     }
 }

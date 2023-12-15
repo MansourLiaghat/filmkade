@@ -27,17 +27,24 @@ class storeVideosRequest extends FormRequest
         return [
             'name' => ['required'],
             'thumbnail' => ['required'],
-            'length' => ['required' , 'integer'],
-            'url' => ['required'],
             'slug' => ['required' , 'alpha_dash'],
             'description' => ['required'],
-            'category_id' => ['required' , 'exists:categories,id']
+            'category_id' => ['required' , 'exists:categories,id'],
+            'file' => ['required' , 'file' , 'mimetypes:video/mp4']
         ];
     }
+
     protected function prepareForValidation(): void
-{
+    {
     $this->merge([
         'slug' => Str::slug($this->slug),
     ]);
+    }
+
+    public function messages()
+    {
+return[
+    'file.*' => 'فایل باید با پسوند mp4 باشد'
+];
     }
 }

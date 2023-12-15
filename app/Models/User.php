@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password'
+        
     ];
 
     /**
@@ -51,6 +52,10 @@ class User extends Authenticatable
     public function comments()
     {
         return $this->hasMany(comment::class);
+    }
+
+    public function videos(){
+        return $this->hasmany(video::class);
     }
 
 }

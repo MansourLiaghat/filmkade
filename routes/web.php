@@ -14,8 +14,10 @@ use App\Models\User;
 use App\Models\video;
 use App\Notifications\videoCreated as NotificationsVideoCreated;
 use App\Notifications\videoUpdate;
+use App\Services\ffmpegAdapter;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,3 +80,9 @@ Route::get('/notify' , function(){
     $user->notify(new videoUpdate($video));
 });
 
+
+Route::get('duration' , function(){
+    $path = 'dmnkpOI2Jp45Z6lkK1SlIIS5X3s002H8YvYkkY8z.mp4';
+    $service = new ffmpegAdapter($path);
+    dd($service->getDuration());
+});
