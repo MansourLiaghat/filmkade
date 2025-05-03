@@ -1,66 +1,131 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎬 فیلمکده – پلتفرم پیشرفته اشتراک‌گذاری فیلم با Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/MansourLiaghat/filmkade)  
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/MansourLiaghat/filmkade/releases)
 
-## About Laravel
+فیلمکده یک پروژه‌ی متن‌باز قدرتمند در حوزه اشتراک‌گذاری ویدئو است که با استفاده از فریم‌ورک محبوب **Laravel** طراحی و پیاده‌سازی شده است. این پلتفرم امکانات متنوعی همچون بارگذاری فیلم، تعامل کاربران، نظردهی، فیلتر و مرتب‌سازی محتوا و سیستم لایک را در اختیار کاربران قرار می‌دهد.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📚 فهرست مطالب
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [ویژگی‌ها](#ویژگیها)
+- [پیش‌نیازها](#پیشنیازها)
+- [نصب و راه‌اندازی](#نصب-و-راهاندازی)
+- [نحوه استفاده](#نحوه-استفاده)
+- [ساختار پروژه](#ساختار-پروژه)
+- [ملاحظات امنیتی](#ملاحظات-امنیتی)
+- [مجوز](#مجوز)
+- [اطلاعات تماس](#اطلاعات-تماس)
+- [تشکر و قدردانی](#تشکر-و-قدردانی)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ ویژگی‌ها
 
-## Learning Laravel
+- بارگذاری ویدئو توسط کاربران  
+- مشاهده‌ی لیست ویدیوهای بارگذاری‌شده  
+- سیستم احراز هویت کاربران  
+- طراحی واکنش‌گرا با استفاده از Tailwind CSS  
+- ساختار ماژولار و قابل توسعه  
+- امکان ثبت نظر زیر هر ویدئو  
+- امکان فیلتر کردن ویدئوها بر اساس دسته‌بندی یا کلیدواژه‌ها  
+- قابلیت لایک و تعامل کاربران با محتوا  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ⚙️ پیش‌نیازها
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- PHP نسخه 8.0 یا بالاتر  
+- Composer  
+- MySQL یا PostgreSQL  
+- Node.js و NPM  
+- Laravel نسخه 9 یا بالاتر
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 نصب و راه‌اندازی
 
-## Laravel Sponsors
+1. کلون کردن مخزن پروژه:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+   ```bash
+   git clone https://github.com/MansourLiaghat/filmkade.git
+   cd filmkade
+   ```
 
-### Premium Partners
+2. نصب وابستگی‌های PHP:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   ```bash
+   composer install
+   ```
 
-## Contributing
+3. تنظیم فایل محیطی `.env`:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## Code of Conduct
+4. پیکربندی اتصال پایگاه‌داده در فایل `.env`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. اجرای مهاجرت‌ها:
 
-## Security Vulnerabilities
+   ```bash
+   php artisan migrate
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. نصب وابستگی‌های فرانت‌اند:
 
-## License
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. اجرای سرور توسعه:
+
+   ```bash
+   php artisan serve
+   ```
+
+اکنون پروژه در آدرس `http://localhost:8000` قابل مشاهده است.
+
+## 🧪 نحوه استفاده
+
+- ثبت‌نام و ورود کاربران  
+- بارگذاری ویدیوهای جدید  
+- مشاهده‌ی لیست ویدیوها  
+- ثبت نظر، لایک کردن و فیلتر محتوا  
+
+## 📁 ساختار پروژه
+
+```
+filmkade/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── .env.example
+├── artisan
+├── composer.json
+├── package.json
+└── README.md
+```
+
+## 🔐 ملاحظات امنیتی
+
+- استفاده از سیستم احراز هویت Laravel برای امنیت کاربران  
+- اعتبارسنجی فرم‌ها و فیلتر ورودی‌ها  
+- جلوگیری از حملات XSS و SQL Injection  
+- مدیریت فایل‌های آپلودشده برای جلوگیری از آپلود فایل‌های مخرب  
+
+## 📄 مجوز
+
+این پروژه تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر فایل [LICENSE](LICENSE) را مشاهده نمایید.
+
+## 📬 اطلاعات تماس
+
+- GitHub نویسنده: [MansourLiaghat](https://github.com/MansourLiaghat)
+
+## 🙏 تشکر و قدردانی
+
+از استاد گرامی، **مهندس مهرداد سامی**  
+([github.com/MSaami](https://github.com/MSaami))  
+به‌خاطر راهنمایی‌ها و حمایت‌های بی‌دریغ در مسیر توسعه این پروژه صمیمانه سپاسگزارم.
